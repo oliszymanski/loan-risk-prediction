@@ -13,4 +13,17 @@ $LGD$ - Loss given default; How much money will the bank lose if they default
 
 $EAD$ - Exposure at default; Total loan amount at risk
 
-For each of those components I've built a seprate model, combined them together and then calculate the expected loss ($EL$) for each of those loans (check [notebook](./notebooks/basel_3_implementation.ipynb)). That way we build a system which automatically checks each loan and calculates it's $EL$.
+For each of those components I've built a seprate model, combined them together and then calculate the expected loss ($EL$) for each of those loans (check [notebook](./notebooks/basel_3_implementation.ipynb)). That way we build a system which automatically checks each loan and calculates it's $EL$. Each of those models we're built on [German credit dataset](./dataset/german_credit_data.csv).
+
+### Probability of default
+A gradient boosted tree model learner takes in the dataset and it is trained by setting a target column (in this case, column `Risk`).
+
+### Loss given default
+LGD valuse is based on collateral and financial situation of every borrower. If the financial situation is more stable, the lower the LGD. But because on bigger datasets there is much more data (much more elements to add to LGD) I had to add some noise to the data so that it would look more realistic:
+
+```python
+ lgd_val = base_lgd + np.random.normal( 0, 0.05 )
+```
+
+### Exposure at default
+Will be always 0 as the data is from when the loans were accepted or not
