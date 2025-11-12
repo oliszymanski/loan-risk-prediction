@@ -27,3 +27,10 @@ LGD valuse is based on collateral and financial situation of every borrower. If 
 
 ### Exposure at default
 Will be always 0 as the data is from when the loans were accepted or not
+
+## Conclusion
+Reports from this dataset show, that bank's total expected loss is about 500-600k:
+<img src='./img/expected_loss_by_risk_segment.png' width=4000px>
+
+At a loss given default:
+<img src='./img/lgd_model_performance.png' width=400px>
