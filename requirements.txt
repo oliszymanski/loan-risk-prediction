@@ -1,2 +1,9 @@
 kaggle
 kagglehub
+sklearn
+matplotlib
+pandas
+numpy
+seaborn
+ydf
+tensorflow
