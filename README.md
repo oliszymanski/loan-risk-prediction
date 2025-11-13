@@ -30,7 +30,7 @@ Will be always 0 as the data is from when the loans were accepted or not
 
 ## Conclusion
 Reports from this dataset show, that bank's total expected loss is about 500-600k:
-<img src='./img/expected_loss_by_risk_segment.png' width=4000px>
+<img src='./img/expected_loss_by_risk_segment.png' width=500px>
 
 At a loss given default:
-<img src='./img/lgd_model_performance.png' width=400px>
+<img src='./img/lgd_model_performance.png' width=500px>
